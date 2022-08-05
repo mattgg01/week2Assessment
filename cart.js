@@ -35,8 +35,8 @@ const cart = [
 
 //CODE HERE
 
-const reduced = cart.reduce((acc, curr) => acc + curr)
-const summedPrice = cart.reduce(reduced)
+const summedPrice = cart.reduce((acc, cur) => acc + cur.price, 0)
+//console.log(summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -55,6 +55,12 @@ const summedPrice = cart.reduce(reduced)
 */
 
 //CODE HERE
+
+function calcFinalPrice (cartTotal, couponValue, tax){
+    return cartTotal + (cartTotal * tax) - couponValue
+}
+
+console.log(calcFinalPrice(10, 2, .1))
 
 
 
@@ -80,7 +86,12 @@ const summedPrice = cart.reduce(reduced)
 
 /*
     TEXT ANSWER HERE
-
+    Properties:
+    firstName - type string - I chose these because the customer needs a name, and a string can store many types of characters that a name requires
+    lastName - type string- I chose these because the customer needs a name, and a string can store many types of characters that a name requires
+    streetAddress - type string- I chose these because the customer needs an address to deliver to, and a string can store many types of characters that an address requires
+    zipCode - type number- I chose these because I want to know the customer's region to give them regional deals: a zip code is all numbers: so I chose a number type
+    wantsPromotionalTexts - type boolean- I chose these because I want to send the customer promo texts to redeem, unless it would make them mad. It's an either or situation which fits a boolean's arguments perfectly
 */
 
 /*
@@ -89,3 +100,11 @@ const summedPrice = cart.reduce(reduced)
 */
 
 //CODE HERE
+
+const customer = {
+    firstName: 'Matt',
+    lastName: 'Gates',
+    streetAddress: '222 Sesame Street',
+    zipCode: 84604,
+    wantsPromotionalTexts: true
+}

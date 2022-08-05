@@ -37,7 +37,7 @@ const pizza = {
     category: 'Entree',
     popularity: 5,
     rating: 4,
-    tags: ['Yummy', 'Delicious'],
+    tags: ['Yummy', 'Delicious','Great Value'],
 
 } 
 
@@ -102,7 +102,7 @@ let {category} = pizza
 */
 
 //CODE HERE
-foodArr = [
+const foodArr = [
     {
         name: "The Greens",
         price: 12,
@@ -117,13 +117,13 @@ foodArr = [
         category: "Appetizer",
         popularity: 7,
         rating: 8,
-        tags: ["Greesy", "Filling","Great value"]
+        tags: ["Oily", "Healthy","Great value"]
     },
     {
         name: "Pop's Personal Favorite",
         price: 18,
         category: "Entree",
-        popularity: 10,
+        popularity: 1,
         rating: 4,
         tags: ["Spicy", "Oily","Sharp"]
     },
@@ -141,7 +141,7 @@ foodArr = [
         category: "Entree",
         popularity: 11,
         rating: 9,
-        tags: ["Massive", "Unhealthy","Fatty"]
+        tags: ["Massive", "Unhealthy","Great value"]
     }
 ]
 
@@ -159,8 +159,13 @@ foodArr = [
 */
 
 //CODE HERE
-//const filteredFood = foodArr.filter(tag => foodArr.tags === tag)
+const filterCallback = (foodObj) => {
+    return foodObj.tags.includes('Massive')
+}
 
+const filteredFood = foodArr.filter(filterCallback)
+
+//console.log(filteredFood)
 
 
 
@@ -198,7 +203,7 @@ foodArr = [
         if it is, return objects whose value for the given
         property is greater than the `number` passed in
 
-        If the type isn't `below`, return objects whose
+        If the type is `below`, return objects whose
         value for the given property is less than the 
         `number` passed in
     
@@ -206,6 +211,17 @@ foodArr = [
 */
 
 //CODE HERE
+function filterByProperty(property, number, type){
+    const filteredArray = foodArr.filter((foodObj) => {
+        if (type === 'above'){
+            return foodObj[property] > number
+        }else if (type === 'below'){
+            return foodObj[property] < number
+        }
+        
+    })
+    return filteredArray
+}
 
 
 /*
@@ -216,3 +232,6 @@ foodArr = [
 */
 
 //CODE HERE
+
+console.log(filterByProperty('popularity', 6, 'below'))
+//console.log(filterByProperty('price', 2, 'above'))

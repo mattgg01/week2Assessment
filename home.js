@@ -56,13 +56,12 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 const canWeDeliver = (zipCode) =>{
     for(i= 0; i < deliveryAreaZipCodes.length; i++){
         if(zipCode === deliveryAreaZipCodes[i]){
-            return `You are eligable for delivery`
-        }else{
-            return `You are not eligable for delivery`
+            return `You're in our delivery zone!`
         }
     }
+    return `Sorry, we can't deliver to that address`
 }
-
+//console.log(canWeDeliver(85213))
 
 
 
@@ -86,10 +85,9 @@ const canWeDeliver = (zipCode) =>{
 // CODE HERE
 const canWeDeliverTwo = (zipCode) => {
     if(deliveryAreaZipCodes.includes(zipCode)){
-        return `You are eligable for delivery`
-    }else{
-        return `You are not eligable for delivery`
+        return `You're in our delivery zone!`  
     }
+    return `Sorry, we can't deliver to that address`
 }
 
 
