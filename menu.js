@@ -31,6 +31,15 @@
 */
 
 //CODE HERE
+const pizza = {
+    name: 'Combo',
+    price: 12,
+    category: 'Entree',
+    popularity: 5,
+    rating: 4,
+    tags: ['Yummy', 'Delicious'],
+
+} 
 
 
 
@@ -43,7 +52,7 @@
 */
 
 //CODE HERE
-
+//console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,6 +62,7 @@
 */
 
 //CODE HERE
+//console.log(pizza.tags[1])
 
 
 /*
@@ -63,6 +73,8 @@
 */
 
 //CODE HERE
+let {price} = pizza
+//console.log(price)
 
 
 /*
@@ -73,6 +85,8 @@
 */
 
 //CODE HERE
+let {category} = pizza
+//console.log(category)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -88,7 +102,48 @@
 */
 
 //CODE HERE
-
+foodArr = [
+    {
+        name: "The Greens",
+        price: 12,
+        category: "Entree",
+        popularity: 3,
+        rating: 2,
+        tags: ["Earthy", "Healthy","Vegan"]
+    },
+    {
+        name: "The Works",
+        price: 14,
+        category: "Appetizer",
+        popularity: 7,
+        rating: 8,
+        tags: ["Greesy", "Filling","Great value"]
+    },
+    {
+        name: "Pop's Personal Favorite",
+        price: 18,
+        category: "Entree",
+        popularity: 10,
+        rating: 4,
+        tags: ["Spicy", "Oily","Sharp"]
+    },
+    {
+        name: "Mickey's Delight",
+        price: 10,
+        category: "Entree",
+        popularity: 2,
+        rating: 7,
+        tags: ["Mild", "Massive","Foreign Flavors"]
+    },
+    {
+        name: "The Big One",
+        price: 25,
+        category: "Entree",
+        popularity: 11,
+        rating: 9,
+        tags: ["Massive", "Unhealthy","Fatty"]
+    }
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -104,8 +159,10 @@
 */
 
 //CODE HERE
+//const filteredFood = foodArr.filter(tag => foodArr.tags === tag)
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+
+
 
 
 
